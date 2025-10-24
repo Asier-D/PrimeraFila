@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Usuario</title>
+</head>
+<body>
+	<div style="text-align:center;">
+		<h1>Ejemplo de paso de objeto en un controller</h1>
+		<h3>Hola, <span th:text="${usuario.nombre}"></span> <span th:text="${usuario.apellido}"></span></h2>
+		<h3>Correo electrónico: <span th:text="${usuario.correo}"></span></h3>
+		<h3>Contraseña: <span th:text="${usuario.contraseña}"></span></h3>
+		<h3>Estado: <span th:text="${usuario.status}"></span></h3>
+	</div>
+</body>
+
+</html>

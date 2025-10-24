@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo paso un listado desde un controlador</title>
+	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+<body>
+	<form class="mt-20 ml-[10%] w-[30%] border-2 p-6 bg-gray-200 rounded-[7px]" th:object="${perro}" method="post" th:action="@{/ejemplos/aniadirperro}">
+	
+	<p class="text-1xl font-bold">Nombre Perro: <input class="border-1 m-1 bg-white rounded" type="text" th:field=*{nombre_perro}></p>
+	<p class="text-1xl font-bold">Raza: <input class="border-1 m-1 bg-white rounded" type="text" th:field=*{raza}></p>
+	<p class="text-1xl font-bold">Nombre Dueño: <input class="border-1 m-1 bg-white rounded" type="text" th:field=*{nombre_duenio}></p>
+	<p class="text-1xl font-bold">Apellido: <input class="border-1 m-1 bg-white rounded" type="text" th:field=*{apellido}></p>
+	<p class="text-1xl font-bold">Correo electrónico: <input class="border-1 m-1 bg-white rounded" type="text" th:field=*{correo}></p>
+	<p class="text-center"><input class="bg-white border p-2 rounded-xl" type="submit" value="Aceptar"></p>
+	
+	</form>
+	<table>
+		<thead class="bg-green-200">
+			<tr>
+				<th>Nombre perro</th>
+				<th>Raza</th>
+				<th>Nombre dueño</th>
+				<th>Apellido</th>
+				<th>Correo electrónico</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="perro : ${perros}">
+				<th th:text="${perro.nombre_perro}"></th>
+				<th th:text="${perro.raza}"></th>
+				<th th:text="${perro.nombre_duenio}"></th>
+				<th th:text="${perro.apellido}"></th>
+				<th th:text="${perro.correo}"></th>
+			</tr>
+		</tbody>
+	</table>
+</body>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Lista - Usuarios</title>
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+<body></body>
+	<h1>Lista de usuarios</h1>
+	<table>
+		<thead class="bg-green-200">
+			<tr>
+				<th>Nombre Usuario</th>
+				<th>Apellidos</th>
+				<th>DNI</th>
+				<th>Rol</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="usuario : ${usuarios}">
+				<th th:text="${usuario.nombre}"></th>
+				<th th:text="${usuario.apellidos}"></th>
+				<th th:text="${usuario.DNI}"></th>
+				<th><img style="width:35px;" th:src="@{'/img/' + ${usuario.roles} + '.png'}" alt="Descripción de la imagen"></th>
+			</tr>
+		</tbody>
+	</table>
