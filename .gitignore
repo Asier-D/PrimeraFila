@@ -1,1 +1,24 @@
+<<<<<<< HEAD
 /.metadata/
+=======
+# Archivos compilados
+*.class
+
+# Logs
+*.log
+
+# Carpetas de compilación
+target/
+build/
+
+# IDEs
+*.idea/
+*.iml
+*.classpath
+*.project
+*.settings/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+>>>>>>> branch 'main' of https://github.com/Asier-D/PrimeraFila.git
