@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo paso un listado desde un controlador</title>
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+<body>
+	<h1>Ejemplo de pasar una lista desde un controlador</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Apellidos</th>
+				<th>DNI</th>
+				<th>Edad</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="persona : ${personas}">
+				<th th:text="${persona.nombre}"></th>
+				<th th:text="${persona.apellidos}"></th>
+				<th th:text="${persona.DNI}"></th>
+				<th th:text="${persona.edad}"></th>
+			</tr>
+		</tbody>
+	
+	</table>
+</body>
